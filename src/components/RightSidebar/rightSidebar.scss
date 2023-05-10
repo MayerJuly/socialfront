@@ -1,0 +1,105 @@
+.rightSidebar {
+  flex:4;
+}
+.rightSidebar__wrapper {
+  padding: 20px 20px 0 0;
+}
+
+.rightSidebar__title {
+  font-size:20px;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.rightSidebar__friendList {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.rightSidebar__friend {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.rightSidebar__profileImage__wrapper {
+  margin-right: 10px;
+  position:relative;
+}
+
+.rightSidebar__profileImage {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.rightSidebar-online {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: limegreen;
+  position:absolute;
+  top: -2px;
+  right: 0;
+  border:2px solid white;
+}
+
+.rightSidebar__username {
+  font-weight: 500;
+}
+
+
+
+
+.rightSidebar__info {
+  margin-bottom: 30px;
+
+  &-item {
+    margin-bottom: 10px;
+  }
+
+  &-key {
+    font-weight: 500;
+    font-size:18px;
+    margin-right: 10px;
+    color:#555;
+  }
+
+  &-value {
+    font-weight: 300;
+    font-size:18px;
+  }
+}
+
+.rightSidebar__followings {
+  display: flex;
+  flex-wrap:wrap;
+  max-width:500px;
+  gap: 15px;
+
+}
+
+
+.rightSidebar__following {
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  width: 120px;
+
+  &-image {
+    width: 100%;
+    height: 120px;
+    object-fit: cover;
+    border-radius:8px;
+    margin-bottom: 5px;
+  }
+
+  &-name {
+    text-align: center;
+    font-size:12px;
+    font-weight: 500;
+  }
+}
+

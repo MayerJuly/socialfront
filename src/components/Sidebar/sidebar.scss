@@ -1,0 +1,90 @@
+.sidebar {
+  flex: 3;
+  height: calc(100vh - 60px);
+  overflow-y: scroll;
+  position:sticky;
+  top: 60px;
+
+
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+::-webkit-scrollbar-thumb {
+  background: #b3b3b3;
+}
+
+.sidebar__wrapper {
+  padding: 20px;
+
+
+}
+
+.sidebar__list {
+  padding: 0 0 0 20px;
+  margin: 0;
+  border-bottom: 1px solid darkgray;
+  list-style: none;
+
+}
+
+.sidebar__list-wrapper {
+  margin-bottom: 20px;
+}
+
+
+.sidebar__list-item {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  font-size:18px;
+  font-weight: 500;
+}
+
+.sidebar-icon {
+  margin-right: 15px;
+}
+.sidebar__friendList {
+  padding: 0 0 0 20px;
+
+  margin: 0;
+  list-style: none;
+
+}
+.sidebar__friend-item {
+  margin-bottom: 15px;
+
+}
+
+.sidebar__friend {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+
+  &-title {
+    font-size:20px;
+    font-weight: 500;
+    margin-bottom: 15px;
+    margin-top: 10px;
+  }
+
+  &-image {
+    margin-right: 10px;
+    border-radius:50%;
+    width: 32px;
+    height: 32px;
+    object-fit: cover;
+
+  }
+
+  &-name {
+    font-size:18px;
+    font-weight: 400;
+
+  }
+
+}

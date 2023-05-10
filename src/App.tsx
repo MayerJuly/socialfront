@@ -1,26 +1,35 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, {useEffect} from 'react';
 import './App.css';
+import AppRouter from "./components/AppRouter/AppRouter";
+import {BrowserRouter} from "react-router-dom";
+import {useAppDispatch, useAppSelector} from "./hooks/redux";
+import {checkAuth, logoutUser} from "./services/ActionCreator";
+import AuthSlice, {authSlice} from "./store/reducers/AuthSlice";
+
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    const {isLoading} = useAppSelector(state => state.authReducer)
+    const dispatch = useAppDispatch()
+    useEffect(() => {
+        if(localStorage.getItem('token')) {
+            dispatch(checkAuth())
+
+        } else if(isLoading) {
+            dispatch(authSlice.actions.isLoadingFalse())
+        }
+
+    }, [])
+
+
+
+
+    return (
+        <div className="App">
+            <BrowserRouter>
+                <AppRouter/>
+            </BrowserRouter>
+        </div>
+    );
 }
 
 export default App;
